@@ -6,7 +6,7 @@ public class Student {
     private String name;
     private String id;
     private ArrayList<Course> courses;
-    private Student[] students;
+    private ArrayList<Student> students = new ArrayList<>();
 
     public Student(String name, String id) {
         this.name = name;
@@ -32,5 +32,10 @@ public class Student {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void addStudent(Student student)
+    {
+        students.add(student);
     }
 }
