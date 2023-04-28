@@ -2,7 +2,6 @@ package edu.utsa.cs3443.campusmapper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,7 +13,6 @@ import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 
 public class MainActivity extends AppCompatActivity
 {
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
