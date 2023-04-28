@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
+import edu.utsa.cs3443.campusmapper.model.Room;
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -23,4 +26,12 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("edu.utsa.cs3443.campusmapper", appContext.getPackageName());
     }
+
+    /*
+    @Test
+    public void testSwitchActivity() {
+        MainActivity mainActivity = new MainActivity();
+        SwitchActivity switchActivity = new SwitchActivity(mainActivity, CoursesActivity.class, new Room("Sample 1.2.3"));
+    }
+     */
 }

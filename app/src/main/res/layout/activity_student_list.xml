@@ -40,6 +40,6 @@
         android:id="@+id/list_map_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Map" />
+        android:text="Go To Map" />
 
 </LinearLayout>
