@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:text="abc123"
+        android:text="@string/abc123"
         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
     <LinearLayout
@@ -35,18 +35,19 @@
             android:id="@+id/dept_code_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Department:"
+            android:text="@string/department_lbl"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <EditText
             android:id="@+id/dept_code_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="Enter department code"
+            android:hint="@string/enter_department_code"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,19 +61,20 @@
             android:id="@+id/course_num_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Course Number:"
+            android:text="@string/course_number"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <EditText
             android:id="@+id/course_num_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="Enter course number"
+            android:hint="@string/enter_course_number"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="" />
+            android:text=""
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout
@@ -86,19 +88,20 @@
             android:id="@+id/name_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Course Name:"
+            android:text="@string/course_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <EditText
             android:id="@+id/name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="Enter course name"
+            android:hint="@string/enter_course_name"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="" />
+            android:text=""
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,19 +115,20 @@
             android:id="@+id/room_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Room:"
+            android:text="@string/room"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <EditText
             android:id="@+id/room_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
             android:ems="10"
-            android:hint="Enter room building and number"
+            android:hint="@string/enter_room_building_and_number"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="" />
+            android:text=""
+            android:autofillHints="" />
     </LinearLayout>
 
     <Button
@@ -132,13 +136,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Enter Course" />
+        android:text="@string/enter_course_btn_lbl" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:text="Go To Map" />
+        android:text="@string/go_to_map_btn_lbl" />
 
 </LinearLayout>

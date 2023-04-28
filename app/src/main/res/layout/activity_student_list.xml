@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:contentDescription="List of students"
+    android:contentDescription="@string/list_of_students"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".StudentListActivity">
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Students"
+                android:text="@string/students_txt"
                 android:textAlignment="center"
                 android:textSize="32sp" />
         </LinearLayout>
@@ -34,12 +34,12 @@
         android:id="@+id/list_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back" />
+        android:text="@string/back_txt" />
 
     <Button
         android:id="@+id/list_map_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Map" />
+        android:text="@string/map_txt" />
 
 </LinearLayout>

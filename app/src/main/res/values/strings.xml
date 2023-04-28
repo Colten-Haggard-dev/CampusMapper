@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">CampusMapper</string>
+    <string name="enter_your_information">Enter your information:</string>
+    <string name="your_name">Your Name:</string>
+    <string name="enter_name">Enter name</string>
+    <string name="your_abc123">Your abc123:</string>
+    <string name="enter_abc123">Enter abc123</string>
+    <string name="add_courses">Add Courses</string>
+    <string name="or">Or</string>
+    <string name="view_students">View Students</string>
+    <string name="welcome">Welcome</string>
+    <string name="abc123">abc123</string>
+    <string name="department_lbl">Department:</string>
+    <string name="enter_department_code">Enter department code</string>
+    <string name="course_number">Course Number:</string>
+    <string name="enter_course_number">Enter course number</string>
+    <string name="course_name">Course Name:</string>
+    <string name="enter_course_name">Enter course name</string>
+    <string name="room">Room:</string>
+    <string name="enter_room_building_and_number">Enter room building and number</string>
+    <string name="enter_course_btn_lbl">Enter Course</string>
+    <string name="go_to_map_btn_lbl">Go To Map</string>
+    <string name="list_of_students">List of students</string>
+    <string name="students_txt">Students</string>
+    <string name="back_txt">Back</string>
+    <string name="map_txt">Map</string>
+
 </resources>

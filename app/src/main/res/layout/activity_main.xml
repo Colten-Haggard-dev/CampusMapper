@@ -13,7 +13,7 @@
         android:id="@+id/instruction_lbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your information:"
+        android:text="@string/enter_your_information"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <LinearLayout
@@ -26,7 +26,7 @@
             android:id="@+id/user_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Name:"
+            android:text="@string/your_name"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000"
             android:textColorHint="#000000" />
@@ -36,10 +36,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter name"
+            android:hint="@string/enter_name"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="" />
+            android:text=""
+            android:autofillHints="" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +53,7 @@
             android:id="@+id/abc123_lbl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your abc123:"
+            android:text="@string/your_abc123"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000"
             android:textColorHint="#000000" />
@@ -62,10 +63,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Enter abc123"
+            android:hint="@string/enter_abc123"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="" />
+            android:text=""
+            android:autofillHints="" />
 
     </LinearLayout>
 
@@ -73,19 +75,19 @@
         android:id="@+id/add_courses_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Courses" />
+        android:text="@string/add_courses" />
 
     <TextView
         android:id="@+id/or_lbl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Or"
+        android:text="@string/or"
         android:textAlignment="center" />
 
     <Button
         android:id="@+id/view_students_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Students" />
+        android:text="@string/view_students" />
 
 </LinearLayout>
