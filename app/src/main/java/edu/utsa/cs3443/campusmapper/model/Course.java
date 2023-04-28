@@ -10,6 +10,6 @@ public class Course {
         this.code = code;
         this.number = number;
         this.name = name;
-        this.room = Room.parseRoom(room);
+        this.room = new Room(room);
     }
 }

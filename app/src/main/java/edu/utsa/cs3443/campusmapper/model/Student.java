@@ -6,12 +6,31 @@ public class Student {
     private String name;
     private String id;
     private ArrayList<Course> courses;
+    private Student[] students;
 
-    public Student(String name, String id, ArrayList<Course> courses) {
+    public Student(String name, String id) {
         this.name = name;
         this.id = id;
-        this.courses = courses;
+        this.courses = new ArrayList<>();
     }
 
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

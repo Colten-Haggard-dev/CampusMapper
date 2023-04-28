@@ -75,4 +75,17 @@
         android:layout_height="wrap_content"
         android:text="Add Courses" />
 
+    <TextView
+        android:id="@+id/or_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/view_students_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Students" />
+
 </LinearLayout>
