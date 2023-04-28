@@ -28,7 +28,6 @@ public class CoursesActivity extends AppCompatActivity
         String[] data = intent.getStringArrayExtra("data");
 
         Student student = new Student(data[0], data[1]);
-        Student.addStudent(student);
 
         TextView welcomeLbl = findViewById(R.id.welcome_lbl);
         TextView abcLbl = findViewById(R.id.abc123_lbl);

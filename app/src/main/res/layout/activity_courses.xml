@@ -28,6 +28,7 @@
         android:id="@+id/DepartmentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -43,17 +44,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/enter_department_code"
             android:inputType="text"
-            android:minHeight="48dp"
-            android:autofillHints="" />
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/NumberLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -69,18 +71,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/enter_course_number"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text=""
-            android:autofillHints="" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/NameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -96,12 +99,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/enter_course_name"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text=""
-            android:autofillHints="" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,6 +138,7 @@
         android:id="@+id/enter_course_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:layout_marginBottom="32dp"
         android:text="@string/enter_course_btn_lbl" />
 

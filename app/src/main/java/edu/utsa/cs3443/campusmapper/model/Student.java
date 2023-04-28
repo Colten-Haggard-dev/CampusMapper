@@ -38,4 +38,8 @@ public class Student {
     {
         students.add(student);
     }
+
+    public static ArrayList<Student> getStudents() {
+        return students;
+    }
 }

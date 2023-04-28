@@ -30,7 +30,7 @@ public class Building {
         while (scnr.hasNextLine()) {
             split_line = scnr.nextLine().split(",");
 
-            building_list.add(new Building(split_line[0], Integer.getInteger(split_line[1]), Integer.getInteger(split_line[2]), Integer.getInteger(split_line[3])));
+            building_list.add(new Building(split_line[0], Integer.parseInt(split_line[1]), Integer.parseInt(split_line[2]), Integer.parseInt(split_line[3])));
         }
 
         buildings = (Building[]) building_list.toArray();
@@ -69,8 +69,7 @@ public class Building {
     }
 
     public int[] getPoint() {
-        int[] point = {x, y};
-        return point;
+        return new int[]{x, y};
     }
 
     public void setPoint(int x, int y) {

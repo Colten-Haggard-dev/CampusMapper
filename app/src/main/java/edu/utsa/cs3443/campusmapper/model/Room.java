@@ -19,9 +19,9 @@ public class Room {
         String[] room = parseRoom(room_str);
 
         this.code = room[0];
-        this.floor = Integer.getInteger(room[1]);
-        this.corridor = Integer.getInteger(room[2]);
-        this.number = Integer.getInteger(room[3]);
+        this.floor = Integer.parseInt(room[1]);
+        this.corridor = Integer.parseInt(room[2]);
+        this.number = Integer.parseInt(room[3]);
     }
 
     public static String[] parseRoom(String str) {

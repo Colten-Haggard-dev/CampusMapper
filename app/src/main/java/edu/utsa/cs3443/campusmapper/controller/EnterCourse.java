@@ -1,5 +1,6 @@
 package edu.utsa.cs3443.campusmapper.controller;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -17,6 +18,10 @@ public class EnterCourse implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        if (!Student.getStudents().contains(student))
+            Student.addStudent(student);
         student.addCourse(new Course(course_info[0].getText().toString(), course_info[1].getText().toString(), course_info[2].getText().toString(), course_info[3].getText().toString()));
+
+        Log.d("MapperDebug", Student.getStudents().toString());
     }
 }
