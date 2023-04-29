@@ -89,4 +89,10 @@
         android:layout_height="wrap_content"
         android:text="@string/view_students" />
 
+    <Button
+        android:id="@+id/map_test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAP TEST" />
+
 </LinearLayout>

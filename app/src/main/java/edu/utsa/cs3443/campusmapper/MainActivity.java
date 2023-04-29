@@ -70,12 +70,14 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
+        String[] temp_data = {"MH", "BB", "FLN", "ART"};
+
         Button add_courses_btn = findViewById(R.id.add_courses_btn);
         Button view_students_btn = findViewById(R.id.view_students_btn);
+        Button test_map_btn = findViewById(R.id.map_test_btn);
 
         add_courses_btn.setOnClickListener(controller);
         view_students_btn.setOnClickListener(new SwitchActivity(MainActivity.this, StudentListActivity.class, null));
-
-        //(findViewById(R.id.add_courses_btn)).setOnClickListener(new addCourses_btn_MainController(this,t1,t2));
+        test_map_btn.setOnClickListener(new SwitchActivity(MainActivity.this, MapActivity.class, temp_data));
     }
 }

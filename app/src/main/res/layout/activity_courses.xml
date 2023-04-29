@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="@string/welcome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/abc123_lbl"
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
         android:text="@string/abc123"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="24sp" />
 
     <LinearLayout
         android:id="@+id/DepartmentLayout"
