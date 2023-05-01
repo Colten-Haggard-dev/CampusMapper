@@ -1,5 +1,7 @@
 package edu.utsa.cs3443.campusmapper.model;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 
 public class Room {
@@ -34,5 +36,12 @@ public class Room {
         System.arraycopy(room_split, 0, ret, 1, room_split.length);
 
         return ret;
+    }
+
+    @NonNull
+    @Override
+    public String toString()
+    {
+        return code+" "+floor+" "+corridor+" "+number;
     }
 }

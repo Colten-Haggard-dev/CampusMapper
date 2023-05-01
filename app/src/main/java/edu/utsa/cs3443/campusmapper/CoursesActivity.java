@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import edu.utsa.cs3443.campusmapper.controller.EnterCourse;
+import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Student;
 
 public class CoursesActivity extends AppCompatActivity
@@ -43,5 +44,14 @@ public class CoursesActivity extends AppCompatActivity
 
         Button enter_course_btn = findViewById(R.id.enter_course_btn);
         enter_course_btn.setOnClickListener(new EnterCourse(course_info, student));
+
+        String[] data_to_transfer = new String[student.getCourses().size()];
+        for (int i = 0 ; i < student.getCourses().size() ; i++)
+        {
+            data_to_transfer[i] = student.getCourses().get(i).toString();
+        }
+
+        Button go_to_map_btn = findViewById(R.id.to_map_btn);
+        go_to_map_btn.setOnClickListener(new SwitchActivity(this, MapActivity.class, data_to_transfer));
     }
 }

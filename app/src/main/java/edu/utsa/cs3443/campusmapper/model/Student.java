@@ -42,4 +42,26 @@ public class Student {
     public static ArrayList<Student> getStudents() {
         return students;
     }
+
+    public ArrayList<Course> getCourses()
+    {
+        return courses;
+    }
+
+    public void setCourses(ArrayList<Course> courses) {
+        this.courses = courses;
+    }
+
+    public String[] getCoursesNames()
+    {
+        int n = courses.size();
+        String[] course_names = new String[n];
+        for(int i = 0; i < n; i++)
+        {
+            course_names[i] = courses.get(i).getName();
+        }
+
+        return course_names;
+    }
+
 }

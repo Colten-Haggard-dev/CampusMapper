@@ -1,19 +1,17 @@
 package edu.utsa.cs3443.campusmapper.model;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
-import edu.utsa.cs3443.campusmapper.R;
-
 public class Building {
-    private static ArrayList<Building> buildings = new ArrayList<>();
+
+    private static Map<String, Building> buildings;
     private String code;
     private int x;
     private int y;
@@ -37,16 +35,20 @@ public class Building {
 
             Log.d("BuildingDebug", String.join(",", split_line));
 
-            buildings.add(new Building(split_line[0], Integer.parseInt(split_line[1]), Integer.parseInt(split_line[2]), Integer.parseInt(split_line[3])));
+            buildings.put(split_line[0], new Building(split_line[0], Integer.parseInt(split_line[1]), Integer.parseInt(split_line[2]), Integer.parseInt(split_line[3])));
         }
     }
 
-    public static ArrayList<Building> getBuildings() {
+    public static Map<String, Building> getBuildings() {
         return buildings;
     }
 
-    public static void setBuildings(ArrayList<Building> buildings) {
+    public static void setBuildings(Map<String ,Building> buildings) {
         Building.buildings = buildings;
+    }
+
+    public static Building getBuilding(String key) {
+        return buildings.get(key);
     }
 
     public String getCode() {
