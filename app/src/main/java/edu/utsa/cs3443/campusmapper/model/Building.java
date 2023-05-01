@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Building {
-
     private static Map<String, Building> buildings;
     private String code;
     private int x;
