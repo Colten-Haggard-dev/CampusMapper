@@ -12,6 +12,8 @@ import java.io.IOException;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Building;
+import edu.utsa.cs3443.campusmapper.model.Course;
+import edu.utsa.cs3443.campusmapper.model.Student;
 
 
 public class MainActivity extends AppCompatActivity
@@ -79,7 +81,15 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
-        String[] temp_data = {"MH", "BB", "FLN", "ART"};
+        Student.addStudent(new Student("Colten Haggard", "ybv663"));
+        Student student = Student.getStudentFromMap("ybv663");
+
+        student.addCourse(new Course("BS", "1234", "Bullshit", "MH 1.2.3"));
+        student.addCourse(new Course("PP", "1234", "Penis", "BB 1.2.3"));
+        student.addCourse(new Course("CS", "1234", "Cringe Science", "FLN 1.2.3"));
+        student.addCourse(new Course("PS", "1234", "Pull Shit", "ART 1.2.3"));
+
+        String[] temp_data = {"ybv663", "MH", "BB", "FLN", "ART"};
 
         Button add_courses_btn = findViewById(R.id.add_courses_btn);
         Button view_students_btn = findViewById(R.id.view_students_btn);

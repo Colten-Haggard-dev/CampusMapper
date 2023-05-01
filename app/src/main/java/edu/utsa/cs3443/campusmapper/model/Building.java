@@ -6,11 +6,12 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Building {
-    private static Map<String, Building> buildings;
+    private static Map<String, Building> buildings = new HashMap<>();
     private String code;
     private int x;
     private int y;
