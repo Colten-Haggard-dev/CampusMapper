@@ -38,10 +38,14 @@ public class Room {
         return ret;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     @NonNull
     @Override
     public String toString()
     {
-        return code+" "+floor+" "+corridor+" "+number;
+        return code+" "+floor+"."+corridor+"."+number;
     }
 }
