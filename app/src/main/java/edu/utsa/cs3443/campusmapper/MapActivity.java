@@ -27,14 +27,7 @@ public class MapActivity extends AppCompatActivity {
 
         RelativeLayout draggable_layout = findViewById(R.id.DraggableLayout);
 
-        Intent intent = getIntent();
-        String[] data = intent.getStringArrayExtra("data");
-
-        try {
-            Building.loadBuildings(MapActivity.this);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        String[] data = getIntent().getStringArrayExtra("data");
 
         for (Building b: Building.getBuildings()) {
             for (String s: data) {

@@ -8,7 +8,10 @@ import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.IOException;
+
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
+import edu.utsa.cs3443.campusmapper.model.Building;
 
 
 public class MainActivity extends AppCompatActivity
@@ -23,6 +26,12 @@ public class MainActivity extends AppCompatActivity
 
         EditText user_name_text = findViewById(R.id.user_name_text);
         EditText abc123_text = findViewById(R.id.abc123_text);
+
+        try {
+            Building.loadBuildings(MainActivity.this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         user_name_text.addTextChangedListener(
                 new TextWatcher() {

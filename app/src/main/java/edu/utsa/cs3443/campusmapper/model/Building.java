@@ -1,7 +1,6 @@
 package edu.utsa.cs3443.campusmapper.model;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -10,20 +9,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import edu.utsa.cs3443.campusmapper.R;
-
 public class Building {
     private static ArrayList<Building> buildings = new ArrayList<>();
     private String code;
     private int x;
     private int y;
-    private int desc;
+    private String name;
 
-    public Building(String code, int x, int y, int desc) {
+    public Building(String code, int x, int y, String name) {
         this.code = code;
         this.x = x;
         this.y = y;
-        this.desc = desc;
+        this.name = name;
     }
 
     public static void loadBuildings(Context context) throws IOException {
@@ -37,7 +34,7 @@ public class Building {
 
             Log.d("BuildingDebug", String.join(",", split_line));
 
-            buildings.add(new Building(split_line[0], Integer.parseInt(split_line[1]), Integer.parseInt(split_line[2]), Integer.parseInt(split_line[3])));
+            buildings.add(new Building(split_line[0], Integer.parseInt(split_line[1]), Integer.parseInt(split_line[2]), split_line[3]));
         }
     }
 
@@ -73,12 +70,12 @@ public class Building {
         this.y = y;
     }
 
-    public int getDesc() {
-        return desc;
+    public String getName() {
+        return name;
     }
 
-    public void setDesc(int desc) {
-        this.desc = desc;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int[] getPoint() {
@@ -93,6 +90,6 @@ public class Building {
     @NonNull
     @Override
     public String toString() {
-        return code + ", " + x + ", " + y + ", " + desc;
+        return code + ", " + x + ", " + y + ", " + name;
     }
 }
