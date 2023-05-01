@@ -1,6 +1,7 @@
 package edu.utsa.cs3443.campusmapper;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,15 +15,16 @@ public class BuildingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_building);
 
+        LinearLayout main_layout = findViewById(R.id.building_layout);
+
         // {building code, student id}
         String[] data = getIntent().getStringArrayExtra("data");
 
-        for (Building b: Building.getBuildings()) {
-            if (b.getCode().equals(data[0])) {
-                ((TextView) findViewById(R.id.building_name_lbl)).setText(b.getName());
-                ((TextView) findViewById(R.id.building_code_lbl)).setText(b.getCode());
-                return;
-            }
-        }
+        Building b = Building.getBuilding(data[0]);
+        if (b == null)
+            return;
+
+        ((TextView) findViewById(R.id.building_name_lbl)).setText(b.getName());
+        ((TextView) findViewById(R.id.building_code_lbl)).setText(b.getCode());
     }
 }

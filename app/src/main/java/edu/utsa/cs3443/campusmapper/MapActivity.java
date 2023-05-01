@@ -29,12 +29,12 @@ public class MapActivity extends AppCompatActivity {
 
         String[] data = getIntent().getStringArrayExtra("data");
 
-        for (Building b: Building.getBuildings()) {
-            for (String s: data) {
-                if (s.equals(b.getCode())) {
-                    addBuildingButton(b, draggable_layout);
-                    break;
-                }
+        for (String s: data) {
+            Building b = Building.getBuilding(s);
+
+            if (b != null) {
+                addBuildingButton(b, draggable_layout);
+                break;
             }
         }
     }
