@@ -1,43 +1,41 @@
 ﻿code,x,y,desc
-MH,1049,420,0
-NPB,1012,292,0
-BB,1137,354,0
-MS,1052,511,0
-ART,1196,545,0
-FLN,1110,564,0
-JPL,1173,425,0
-MB,1237,414,0
-SSC,1027,359,0
-GSR,973,318,0
-FLN,1106,564,0
-BSB,1096,630,0
-EB,1134,610,0
-BSE,1161,660,0
-AET,1132,699,0
-SEB,1237,661,0
-RRC,637,288,0
-BOS,898,361,0
-TEP,890,399,0
-SU,953,474,0
-HSU,968,544,0
-IAB,853,529,0
-CC,868,596,0
-RWC,767,670,0
-RACE,635,720,0
-COVERED PRACTICE FIELD,658,753,0
-IFH,586,554,0
-BBL,565,530,0
-CDC,394,871,0
-LST,337,252,0
-MBT,253,402,0
-SRL,298,449,0
-SC,328,497,0
-SEL,390,464,0
-PDS,383,479,0
-MEMS,365,493,0
-SC,328,497,0
-SCG,347,530,0
-CRW,204,498,0
-BSA,288,544,0
-CAR,226,553,0
-FSB,220,633,0
+MH,1049,420,McKinney Humanities Building
+NPB,1012,292,North Paseo Building
+BB,1137,354,Business Building
+MS,1052,511,Multidisciplinary Studies Building
+ART,1196,545,Arts Building
+FLN,1110,564,Flawn Sciences Building
+JPL,1173,425,John Peace Library
+MB,1237,414,Main Building
+SSC,1027,359,Science Building
+GSR,973,318,Graduate School & Research Building
+BSB,1096,630,Biosciences Building
+EB,1134,610,Engineering Building
+BSE,1161,660,Biotechnology Sciences and Engineering Building
+AET,1132,699,Applied Engineering and Technology Building
+SEB,1237,661,Science and Engineering Building
+RRC,637,288,Roadrunner Café
+BOS,898,361,Bosque Street Building
+TEP,890,399,Thermal Energy Plant
+SU,953,474,Student Union
+HSU,968,544,H-E-B Student Union
+IAB,853,529,Intercollegiate Athletics Building
+CC,868,596,Convocation Center
+RWC,767,670,Recreation Wellness Center
+RACE,635,720,Roadrunner Athletic Center of Excellence
+COVERED PRACTICE FIELD,658,753,Covered Practice Field
+IFH,586,554,Intramural Field House
+BBL,565,530,Baseball Locker Rooms
+CDC,394,871,Child Development Center
+LST,337,252,Large-Scale Testing Laboratory
+MBT,253,402,Margaret Batts Tobin Laboratories
+SRL,298,449,Science Research Laboratories
+SEL,390,464,Science and Engineering Lab
+PDS,383,479,Power & Dynamics Systems Lab
+MEMS,365,493,MEMS Lab
+SC,328,497,Sculpture / Ceramics
+SCG,347,530,Sculpture & Ceramics Graduate Studio
+CRW,204,498,Central Receiving & Warehouse
+BSA,288,544,Business Services Annex
+CAR,226,553,Center for Archaeological Research
+FSB,220,633,Facilities Services Building
