@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Building;
@@ -78,6 +79,8 @@ public class MapActivity extends AppCompatActivity {
         layoutParams.topMargin = (int) (building.getY() * y_ratio - size/dpi);
         button.setLayoutParams(layoutParams);
         button.setText(building.getCode());
+        button.setBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.utsa_blue, null));
+        button.setTextColor(ResourcesCompat.getColor(getResources(), R.color.utsa_orange, null));
         button.setOnClickListener(new SwitchActivity(MapActivity.this, BuildingActivity.class, data));
 
         layout.addView(button);
