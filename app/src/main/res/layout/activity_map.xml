@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="Panning view">
+                android:contentDescription="@string/panning_view">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -36,7 +37,9 @@
                             android:id="@+id/map_image"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/main_campus" />
+                            android:contentDescription="@string/map_image"
+                            app:srcCompat="@drawable/main_campus"
+                            tools:ignore="ImageContrastCheck" />
 
                     </RelativeLayout>
                 </LinearLayout>

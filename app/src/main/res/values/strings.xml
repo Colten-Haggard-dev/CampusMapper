@@ -24,4 +24,10 @@
     <string name="students_txt">Students</string>
     <string name="back_txt">Back</string>
     <string name="map_txt">Map</string>
+    <string name="building_info">Building Info:</string>
+    <string name="name_info">Name</string>
+    <string name="code_info">Code</string>
+    <string name="course_info">Course Info:</string>
+    <string name="panning_view">Panning view</string>
+    <string name="map_image">Map image</string>
 </resources>
