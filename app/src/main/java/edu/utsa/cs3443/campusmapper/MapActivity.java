@@ -36,6 +36,11 @@ public class MapActivity extends AppCompatActivity {
             return;
         }
 
+        if (!Student.getStudentsIdMap().containsKey(data[0])) {
+            Toast.makeText(this, "ERROR: STUDENT DOES NOT EXIST", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         student_id = Student.getStudentFromMap(data[0]).getId();
 
         for (String s: data) {

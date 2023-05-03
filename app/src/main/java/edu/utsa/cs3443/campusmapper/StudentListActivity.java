@@ -1,25 +1,22 @@
 package edu.utsa.cs3443.campusmapper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.os.Bundle;
-import android.util.Log;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
-import edu.utsa.cs3443.campusmapper.model.Course;
-import edu.utsa.cs3443.campusmapper.model.Room;
 import edu.utsa.cs3443.campusmapper.model.Student;
 
 public class StudentListActivity extends AppCompatActivity
 {
-    private Student student;
+    private Student student = new Student("null", "abc123");
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,7 +24,7 @@ public class StudentListActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_list);
 
-        LinearLayout linearLayout = findViewById(R.id.linear_layout);
+        LinearLayout linearLayout = findViewById(R.id.student_list_layout);
         CheckBox checkBox;
         for(Student stud : Student.getStudents())
         {
@@ -50,13 +47,19 @@ public class StudentListActivity extends AppCompatActivity
             });
         }
 
+        if (student.getCourses() == null)
+        {
+            Toast.makeText(this, "ERROR: NO STUDENTS", Toast.LENGTH_SHORT).show();
+        }
+
         String[] data = new String[student.getCourses().size()];
-        for(int i = 0; i < student.getCourses().size(); i++)
+        for(int i = 0; i < student.getCourses().size(); ++i)
         {
             data[i] = student.getCourses().get(i).getRoom().toString();
         }
 
         Button map_btn = findViewById(R.id.list_map_btn);
+
         map_btn.setOnClickListener(new SwitchActivity(this, MapActivity.class,data));
     }
 }

@@ -15,6 +15,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/student_list_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|top"
@@ -31,12 +32,6 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/list_back_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back_txt" />
 
     <Button
         android:id="@+id/list_map_btn"

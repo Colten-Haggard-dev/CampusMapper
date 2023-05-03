@@ -155,6 +155,13 @@
                 android:text="@string/enter_course_btn_lbl" />
 
             <Button
+                android:id="@+id/view_student_list_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="View Student List" />
+
+            <Button
                 android:id="@+id/to_map_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
