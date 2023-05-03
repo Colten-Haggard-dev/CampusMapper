@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import edu.utsa.cs3443.campusmapper.controller.EnterCourse;
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Student;
@@ -33,7 +31,7 @@ public class CoursesActivity extends AppCompatActivity
         TextView welcomeLbl = findViewById(R.id.welcome_lbl);
         TextView abcLbl = findViewById(R.id.abc123_lbl);
 
-        welcomeLbl.setText("Welcome " + data[0]);
+        welcomeLbl.setText(String.format("Welcome %s", data[0]));
         abcLbl.setText(data[1]);
 
         EditText[] course_info = new EditText[4];
@@ -42,16 +40,13 @@ public class CoursesActivity extends AppCompatActivity
         course_info[2] = findViewById(R.id.name_text);
         course_info[3] = findViewById(R.id.room_text);
 
-        Button enter_course_btn = findViewById(R.id.enter_course_btn);
-        enter_course_btn.setOnClickListener(new EnterCourse(course_info, student));
+        String[] data_to_transfer = new String[student.getCourses().size() + 1];
+        SwitchActivity switchController = new SwitchActivity(this, MapActivity.class, data_to_transfer);
 
-        String[] data_to_transfer = new String[student.getCourses().size()];
-        for (int i = 0 ; i < student.getCourses().size() ; i++)
-        {
-            data_to_transfer[i] = student.getCourses().get(i).toString();
-        }
+        Button enter_course_btn = findViewById(R.id.enter_course_btn);
+        enter_course_btn.setOnClickListener(new EnterCourse(course_info, student, switchController));
 
         Button go_to_map_btn = findViewById(R.id.to_map_btn);
-        go_to_map_btn.setOnClickListener(new SwitchActivity(this, MapActivity.class, data_to_transfer));
+        go_to_map_btn.setOnClickListener(switchController);
     }
 }

@@ -1,15 +1,12 @@
 package edu.utsa.cs3443.campusmapper;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.IOException;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Building;
@@ -34,8 +31,10 @@ public class MapActivity extends AppCompatActivity {
         // {student_id, courses...}
         String[] data = getIntent().getStringArrayExtra("data");
 
-        if (Student.getStudentsIdMap() == null)
+        if (Student.getStudentsIdMap() == null) {
+            Toast.makeText(this, "ERROR: NO STUDENT HASHMAP", Toast.LENGTH_SHORT).show();
             return;
+        }
 
         student_id = Student.getStudentFromMap(data[0]).getId();
 

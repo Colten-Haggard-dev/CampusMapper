@@ -8,8 +8,8 @@ public class Student {
     private String name;
     private String id;
     private ArrayList<Course> courses;
-    private static ArrayList<Student> students = new ArrayList<>();
-    private static Map<String, Student> students_id_map = new HashMap<>();
+    private static final ArrayList<Student> students = new ArrayList<>();
+    private static final Map<String, Student> students_id_map = new HashMap<>();
 
     public Student(String name, String id) {
         this.name = name;
@@ -68,7 +68,8 @@ public class Student {
     {
         int n = courses.size();
         String[] course_names = new String[n];
-        for(int i = 0; i < n; i++)
+
+        for(int i = 0; i < n; ++i)
         {
             course_names[i] = courses.get(i).getName();
         }
@@ -76,4 +77,14 @@ public class Student {
         return course_names;
     }
 
+    public String[] getRoomCodes() {
+        int n = courses.size();
+        String[] room_codes = new String[n];
+
+        for (int i = 0; i < n; ++i) {
+            room_codes[i] = courses.get(i).getRoom().getCode();
+        }
+
+        return room_codes;
+    }
 }
