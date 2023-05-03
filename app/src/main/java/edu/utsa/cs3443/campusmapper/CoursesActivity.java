@@ -48,5 +48,9 @@ public class CoursesActivity extends AppCompatActivity
 
         Button go_to_map_btn = findViewById(R.id.to_map_btn);
         go_to_map_btn.setOnClickListener(switchController);
+
+        Button view_students_btn = findViewById(R.id.view_student_list_btn);
+        view_students_btn.setOnClickListener(new SwitchActivity(CoursesActivity.this, StudentListActivity.class, null));
+
     }
 }
