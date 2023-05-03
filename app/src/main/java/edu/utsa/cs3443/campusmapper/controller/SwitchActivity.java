@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.view.View;
 
 public class SwitchActivity implements View.OnClickListener{
-    private Context context;
-    private Class to_activity;
+    private final Context context;
+    private final Class to_activity;
     private String[] transfer_data;
 
 
