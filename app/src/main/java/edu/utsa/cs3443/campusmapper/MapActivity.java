@@ -2,7 +2,6 @@ package edu.utsa.cs3443.campusmapper;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,8 +9,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Timer;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Building;

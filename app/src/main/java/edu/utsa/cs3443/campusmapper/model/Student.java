@@ -7,7 +7,7 @@ import java.util.Map;
 public class Student {
     private String name;
     private String id;
-    private ArrayList<Course> courses;
+    private final ArrayList<Course> courses;
     private static final ArrayList<Student> students = new ArrayList<>();
     private static final Map<String, Student> students_id_map = new HashMap<>();
 
@@ -58,10 +58,6 @@ public class Student {
     public ArrayList<Course> getCourses()
     {
         return courses;
-    }
-
-    public void setCourses(ArrayList<Course> courses) {
-        this.courses = courses;
     }
 
     public String[] getCoursesNames()

@@ -23,13 +23,13 @@ public class EnterCourse implements View.OnClickListener {
             Student.addStudent(student);
         student.addCourse(new Course(course_info[0].getText().toString(), course_info[1].getText().toString(), course_info[2].getText().toString(), course_info[3].getText().toString()));
 
-        String[] course_names = student.getRoomCodes();
-        int course_length = course_names.length;
+        String[] room_codes = student.getRoomCodes();
+        int course_length = room_codes.length;
 
         String[] data = new String[course_length + 1];
 
         data[0] = student.getId();
-        System.arraycopy(course_names, 0, data, 1, course_length);
+        System.arraycopy(room_codes, 0, data, 1, course_length);
 
         listener.setData(data);
 

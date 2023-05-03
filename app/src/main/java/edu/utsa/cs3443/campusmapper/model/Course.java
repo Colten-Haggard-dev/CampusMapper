@@ -1,12 +1,12 @@
 package edu.utsa.cs3443.campusmapper.model;
 
-import android.util.Log;
+import androidx.annotation.NonNull;
 
 public class Course {
-    private String code;
-    private int number;
+    private final String code;
+    private final int number;
     private String name;
-    private Room room;
+    private final Room room;
 
     public Course(String code, String number, String name, String room) {
         this.code = code;
@@ -27,26 +27,15 @@ public class Course {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     public Room getRoom() {
         return room;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
+    @NonNull
     public String toString() {
         return code + ", " + number + ", " + name + ", " + room.toString();
     }

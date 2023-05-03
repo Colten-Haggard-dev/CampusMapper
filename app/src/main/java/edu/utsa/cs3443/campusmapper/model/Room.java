@@ -2,20 +2,11 @@ package edu.utsa.cs3443.campusmapper.model;
 
 import androidx.annotation.NonNull;
 
-import java.util.ArrayList;
-
 public class Room {
-    private String code;
-    private int floor;
-    private int corridor;
-    private int number;
-
-    public Room(String code, int floor, int corridor, int number) {
-        this.code = code;
-        this.floor = floor;
-        this.corridor = corridor;
-        this.number = number;
-    }
+    private final String code;
+    private final int floor;
+    private final int corridor;
+    private final int number;
 
     public Room(String room_str) {
         String[] room = parseRoom(room_str);

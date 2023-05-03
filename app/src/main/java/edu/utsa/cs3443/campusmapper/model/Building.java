@@ -11,10 +11,10 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Building {
-    private static Map<String, Building> buildings = new HashMap<>();
-    private String code;
-    private int x;
-    private int y;
+    private static final Map<String, Building> buildings = new HashMap<>();
+    private final String code;
+    private final int x;
+    private final int y;
     private String name;
 
     public Building(String code, int x, int y, String name) {
@@ -39,14 +39,6 @@ public class Building {
         }
     }
 
-    public static Map<String, Building> getBuildings() {
-        return buildings;
-    }
-
-    public static void setBuildings(Map<String ,Building> buildings) {
-        Building.buildings = buildings;
-    }
-
     public static Building getBuilding(String key) {
         return buildings.get(key);
     }
@@ -55,24 +47,12 @@ public class Building {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
-
     public int getX() {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public void setName(String name) {
@@ -81,15 +61,6 @@ public class Building {
 
     public String getName() {
         return name;
-    }
-
-    public int[] getPoint() {
-        return new int[]{x, y};
-    }
-
-    public void setPoint(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 
     @NonNull
