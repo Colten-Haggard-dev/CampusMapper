@@ -81,15 +81,24 @@ public class MainActivity extends AppCompatActivity
                 }
         );
 
-        Student.addStudent(new Student("Colten Haggard", "ybv663"));
-        Student student = Student.getStudentFromMap("ybv663");
+        Student student1 = new Student("Big Stupid", "abc123");
 
-        student.addCourse(new Course("BS", "1234", "Bullshit", "MH 1.2.3"));
-        student.addCourse(new Course("PP", "1234", "Penis", "BB 1.2.3"));
-        student.addCourse(new Course("CS", "1234", "Cringe Science", "FLN 1.2.3"));
-        student.addCourse(new Course("PS", "1234", "Pull Shit", "ART 1.2.3"));
+        student1.addCourse(new Course("BS", "1234", "Bullshit", "MH 1.2.3"));
+        student1.addCourse(new Course("PP", "1234", "Penis", "BB 1.2.3"));
+        student1.addCourse(new Course("CS", "1234", "Cringe Science", "FLN 1.2.3"));
+        student1.addCourse(new Course("PS", "1234", "Pull Shit", "ART 1.2.3"));
 
-        String[] temp_data = {"ybv663", "MH", "BB", "FLN", "ART"};
+        Student student2 = new Student("Bigger Stupid", "abc223");
+
+        student2.addCourse(new Course("BS", "1234", "Bullshit", "MH 1.2.3"));
+        student2.addCourse(new Course("PP", "1234", "Penis", "BB 1.2.3"));
+        student2.addCourse(new Course("CS", "1234", "Cringe Science", "FLN 1.2.3"));
+        student2.addCourse(new Course("PS", "1234", "Pull Shit", "ART 1.2.3"));
+
+        Student.addStudent(student1);
+        Student.addStudent(student2);
+
+        String[] temp_data = {"abc123", "MH", "BB", "FLN", "ART"};
 
         Button add_courses_btn = findViewById(R.id.add_courses_btn);
         Button view_students_btn = findViewById(R.id.view_students_btn);
