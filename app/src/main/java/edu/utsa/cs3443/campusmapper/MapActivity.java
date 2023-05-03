@@ -2,11 +2,16 @@ package edu.utsa.cs3443.campusmapper;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Timer;
 
 import edu.utsa.cs3443.campusmapper.controller.SwitchActivity;
 import edu.utsa.cs3443.campusmapper.model.Building;
@@ -16,6 +21,7 @@ public class MapActivity extends AppCompatActivity {
     private int dpi;
     private int size;
     private String student_id;
+    private String[] data;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -26,10 +32,8 @@ public class MapActivity extends AppCompatActivity {
         dpi = getResources().getDisplayMetrics().densityDpi/160;
         size = 85 * dpi;
 
-        RelativeLayout draggable_layout = findViewById(R.id.DraggableLayout);
-
         // {student_id, courses...}
-        String[] data = getIntent().getStringArrayExtra("data");
+        data = getIntent().getStringArrayExtra("data");
 
         if (Student.getStudentsIdMap() == null) {
             Toast.makeText(this, "ERROR: NO STUDENT HASHMAP", Toast.LENGTH_SHORT).show();
@@ -43,21 +47,34 @@ public class MapActivity extends AppCompatActivity {
 
         student_id = Student.getStudentFromMap(data[0]).getId();
 
-        for (String s: data) {
-            Building b = Building.getBuilding(s);
+        RelativeLayout draggable_layout = findViewById(R.id.DraggableLayout);
 
-            if (b != null) {
-                addBuildingButton(b, draggable_layout);
+        ImageView imageView = findViewById(R.id.map_image);
+
+        imageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+                for (String s: data) {
+                    Building b = Building.getBuilding(s);
+
+                    if (b != null) {
+                        addBuildingButton(b, draggable_layout);
+                    }
+                }
             }
-        }
+        });
     }
 
     private void addBuildingButton(Building building, RelativeLayout layout) {
         Button button = new Button(MapActivity.this);
 
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(size, size);
-        float x_ratio = (float) 4061 / (float) 1547;
-        float y_ratio = (float) 2804 / (float) 1068;
+        ImageView imageView = findViewById(R.id.map_image);
+
+        float x_ratio = imageView.getWidth() / (float) 1547;
+        float y_ratio = imageView.getHeight() / (float) 1068;
         String[] data = {building.getCode(), student_id};
 
         layoutParams.leftMargin = (int) (building.getX() * x_ratio - size/dpi);
